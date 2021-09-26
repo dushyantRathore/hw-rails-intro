@@ -1,12 +1,41 @@
 class MoviesController < ApplicationController
 
     def index
-      # Apply the sort according to the parameter
-      @movies = Movie.all.order(params[:sort])
+
+      # Get all the movie ratings (unique)
+      @all_ratings = Movie.select(:rating).map(&:rating).uniq
+
+      if params[:sort] || params[:ratings] # Check if defined
+        
+        puts "\n---------- Inside check for sorting/ratings ----------"
+
+        puts "\n---------- Selected Sorting ----------"
+        puts params[:sort]
+
+        # Update the sorting-on-column check
+        @sorting_on_column = params[:sort]
+
+        # Extract the parameters for ratings
+        @ratings = params[:ratings]
+        puts "\n---------- Ratings Parameters Provided ----------"
+        puts @ratings
+
+        # Check if ratings are defined and handle accordingly
+        @ratings ||= @all_ratings
+        puts "\n---------- Modified Ratings ----------" 
+        puts @ratings
+
+        # Reference the responses going to the view
+        @ratings = @ratings.keys if @ratings.respond_to?(:keys) 
+        puts "\n---------- Final Ratings for reference ----------"
+        puts @ratings
+
+        @movies = Movie.where("rating IN (?)", @ratings).order(params[:sort])
       
-      # Update the sorting-on-column check
-      @sorting_on_column = params[:sort]
-      
+      else
+        @movies = Movie.all 
+      end
+
     end  
   
     def show

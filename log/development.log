@@ -2398,3 +2398,2559 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.erb within layouts/application (2.8ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:20:29 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 457ms (Views: 454.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 11:20:50 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 11:20:51 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY release_date
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 11:20:52 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:40:29 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 11:40:31 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 11:40:32 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY title
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:40:34 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:42:33 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:5: syntax error, unexpected '=', expecting end
+= form_tag movies_path, :metho...
+^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:6: syntax error, unexpected ':', expecting end
+  Include:
+         ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:8: syntax error, unexpected '='
+    = rating
+    ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:10: syntax error, unexpected '=', expecting end
+  = submit_tag 'Refresh', :class...
+  ^):
+  app/views/movies/index.html.erb:5: syntax error, unexpected '=', expecting end
+  app/views/movies/index.html.erb:6: syntax error, unexpected ':', expecting end
+  app/views/movies/index.html.erb:8: syntax error, unexpected '='
+  app/views/movies/index.html.erb:10: syntax error, unexpected '=', expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (49.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:42:47 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:5: syntax error, unexpected '=', expecting end
+= form_tag movies_path, :metho...
+^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:6: syntax error, unexpected ':', expecting end
+  Include:
+         ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:8: syntax error, unexpected '='
+    = rating
+    ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:10: syntax error, unexpected '=', expecting end
+  = submit_tag 'Refresh', :class...
+  ^):
+  app/views/movies/index.html.erb:5: syntax error, unexpected '=', expecting end
+  app/views/movies/index.html.erb:6: syntax error, unexpected ':', expecting end
+  app/views/movies/index.html.erb:8: syntax error, unexpected '='
+  app/views/movies/index.html.erb:10: syntax error, unexpected '=', expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (21.8ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:43:04 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+  Include:
+         ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:7: syntax error, unexpected '='
+    = rating
+    ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:9: syntax error, unexpected '=', expecting ')'
+  = submit_tag 'Refresh', :class...
+  ^):
+  app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+  app/views/movies/index.html.erb:7: syntax error, unexpected '='
+  app/views/movies/index.html.erb:9: syntax error, unexpected '=', expecting ')'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.6ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:44:57 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+'.freeze;  Include:
+                  ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:47: syntax error, unexpected end-of-input, expecting end):
+  app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+  app/views/movies/index.html.erb:47: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.8ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:45:10 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+'.freeze;  Include:
+                  ^):
+  app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (20.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:50:09 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:45: syntax error, unexpected end-of-input, expecting end):
+  app/views/movies/index.html.erb:45: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.3ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:51:49 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:45: syntax error, unexpected end-of-input, expecting end):
+  app/views/movies/index.html.erb:45: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:52:22 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected end-of-input, expecting end):
+  app/views/movies/index.html.erb:46: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (22.6ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:52:23 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected end-of-input, expecting end):
+  app/views/movies/index.html.erb:46: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.8ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:52:48 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected end-of-input, expecting end):
+  app/views/movies/index.html.erb:46: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (19.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (23.8ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:52:49 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected end-of-input, expecting end):
+  app/views/movies/index.html.erb:46: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (19.9ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:54:13 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <h2>All Movies</h2>
+    3: 
+    4: <%= form_tag movies_path, :method => :get do %>
+    5:   <% @all_ratings.each do |rating| %>
+    6:     <%= rating%>
+    7:     <%= check_box_tag "ratings[#{rating}]"%>
+    8:   <%= submit_tag 'Refresh', :class => 'btn btn-primary'%>
+  app/views/movies/index.html.erb:5:in `block in _app_views_movies_index_html_erb___4017469375994505708_70091490115980'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___4017469375994505708_70091490115980'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.9ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:54:53 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+'.freeze;   Include: 
+                   ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:47: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+  app/views/movies/index.html.erb:47: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (8.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (19.0ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:55:02 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <h2>All Movies</h2>
+    3: 
+    4: <%= form_tag movies_path, :method => :get do %>
+    5:   <% @all_ratings.each do |rating| %>
+    6:     <%= rating%>
+    7:     <%= check_box_tag "ratings[#{rating}]"%>
+    8:   <%= submit_tag 'Refresh', :class => 'btn btn-primary'%>
+  app/views/movies/index.html.erb:5:in `block in _app_views_movies_index_html_erb___4017469375994505708_70091493211700'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___4017469375994505708_70091493211700'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (21.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.7ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:58:54 -0500
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/controllers/movies_controller.rb:54: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:54: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.1ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:59:12 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <h2>All Movies</h2>
+    3: 
+    4: <%= form_tag movies_path, :method => :get do %>
+    5:   <% @all_ratings.each do |rating| %>
+    6:     <%= rating%>
+    7:     <%= check_box_tag "ratings[#{rating}]"%>
+    8:   <%= submit_tag 'Refresh', :class => 'btn btn-primary'%>
+  app/views/movies/index.html.erb:5:in `block in _app_views_movies_index_html_erb___4017469375994505708_70091493211700'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___4017469375994505708_70091493211700'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (22.8ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:59:26 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <h2>All Movies</h2>
+    3: 
+    4: <%= form_tag movies_path, :method => :get do %>
+    5:   <% @all_ratings.each do |rating| %>
+    6:     <%= rating%>
+    7:     <%= check_box_tag "ratings[#{rating}]"%>
+    8:   <%= submit_tag 'Refresh', :class => 'btn btn-primary'%>
+  app/views/movies/index.html.erb:5:in `block in _app_views_movies_index_html_erb___4017469375994505708_70091493211700'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___4017469375994505708_70091493211700'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.6ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 11:59:27 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: <h2>All Movies</h2>
+    3: 
+    4: <%= form_tag movies_path, :method => :get do %>
+    5:   <% @all_ratings.each do |rating| %>
+    6:     <%= rating%>
+    7:     <%= check_box_tag "ratings[#{rating}]"%>
+    8:   <%= submit_tag 'Refresh', :class => 'btn btn-primary'%>
+  app/views/movies/index.html.erb:5:in `block in _app_views_movies_index_html_erb___4017469375994505708_70091493211700'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___4017469375994505708_70091493211700'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (18.6ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:00:22 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"movies"} missing required keys: [:id]):
+    1: <!--  This file is app/views/movies/index.html.erb -->
+    2: <h2>All Movies</h2>
+    3: 
+    4: <%= form_tag movie_path(), :method => :get do %>
+    5:   <% @all_ratings.each do |rating| %>
+    6:     <%= rating%>
+    7:     <%= check_box_tag "ratings[#{rating}]"%>
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___4017469375994505708_70091490427600'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.0ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:00:37 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (2.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (36.1ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.7ms)
+
+ActionView::Template::Error (undefined local variable or method `movie' for #<#<Class:0x00007f7ee1680530>:0x00007f7ee5334260>
+Did you mean?  @movies):
+    1: <!--  This file is app/views/movies/index.html.erb -->
+    2: <h2>All Movies</h2>
+    3: 
+    4: <%= form_tag movie_path(movie), :method => :get do %>
+    5:   <% @all_ratings.each do |rating| %>
+    6:     <%= rating%>
+    7:     <%= check_box_tag "ratings[#{rating}]"%>
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___4017469375994505708_70091462744240'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:01:22 -0500
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (51.8ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:01:36 -0500
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (23.1ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:03:59 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+....append=  form_tag , :method => :get do @output_buffer.safe_...
+...                             ^~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+  app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:04:19 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+....append=  form_tag , :method => :get do @output_buffer.safe_...
+...                             ^~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+  app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (19.1ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:04:51 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+....append=  form_tag , :method => :get do @output_buffer.safe_...
+...                             ^~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+  app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.3ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:04:54 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+....append=  form_tag , :method => :get do @output_buffer.safe_...
+...                             ^~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+  app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (24.9ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:05:22 -0500
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+....append=  form_tag , :method => :get do @output_buffer.safe_...
+...                             ^~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+  app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.9ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:06:36 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.4ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+....append=  form_tag , :method => :get do @output_buffer.safe_...
+...                             ^~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+  app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.3ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:08:28 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+....append=  form_tag , :method => :get do @output_buffer.safe_...
+...                             ^~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+  app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:09:45 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+....append=  form_tag , :method => :get do @output_buffer.safe_...
+...                             ^~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:4: syntax error, unexpected =>, expecting end
+  app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.9ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:18:45 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+'.freeze;   Include: 
+                   ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:12: syntax error, unexpected end, expecting end-of-input
+ end 
+ ^~~):
+  app/views/movies/index.html.erb:5: syntax error, unexpected ':', expecting end
+  app/views/movies/index.html.erb:12: syntax error, unexpected end, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:20:25 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:47: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  app/views/movies/index.html.erb:47: syntax error, unexpected ensure, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:20:39 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:20:42 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:20:45 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:21:16 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:21:19 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:21:46 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:22:11 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected ','
+...g movies_path, method: :get do, id: "ratings_form");@output_...
+...                              ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:4: syntax error, unexpected ')', expecting end
+...d: :get do, id: "ratings_form");@output_buffer.safe_append='
+...                              ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:10: syntax error, unexpected end, expecting ')'
+'.freeze; end 
+          ^~~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:48: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  app/views/movies/index.html.erb:4: syntax error, unexpected ','
+  app/views/movies/index.html.erb:4: syntax error, unexpected ')', expecting end
+  app/views/movies/index.html.erb:10: syntax error, unexpected end, expecting ')'
+  app/views/movies/index.html.erb:46: syntax error, unexpected ensure, expecting ')'
+  app/views/movies/index.html.erb:48: syntax error, unexpected end, expecting ')'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.8ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:22:22 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:24:38 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:9: syntax error, unexpected ':', expecting =>
+...lass => "btn btn-primary", :id: "ratings_submit" );@output_b...
+...                              ^):
+  app/views/movies/index.html.erb:9: syntax error, unexpected ':', expecting =>
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:24:48 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:26:12 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+..._box_tag "ratings[#{rating}]" :id => "ratings_#{rating}" );@...
+...                              ^):
+  app/views/movies/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.8ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:26:23 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:28:58 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:17: syntax error, unexpected ':', expecting ')'
+...es_path(:sort => "title"), id : "title_header", class: ("hil...
+...                              ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/views/movies/index.html.erb:17: syntax error, unexpected ',', expecting ')'
+... "title"), id : "title_header", class: ("hilite" if @sorting...
+...                              ^):
+  app/views/movies/index.html.erb:17: syntax error, unexpected ':', expecting ')'
+  app/views/movies/index.html.erb:17: syntax error, unexpected ',', expecting ')'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.9ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:29:13 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:29:53 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:30:46 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:30:49 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:30:56 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:32:53 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:32:56 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:34:32 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:34:34 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:34:42 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 12:35:44 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 12:35:45 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:35:46 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:35:52 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:41:05 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 39ms (Views: 25.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:41:07 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:41:11 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:42:06 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (2.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 25.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:42:12 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:45:14 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('---
+- PG-13
+- ''1''
+','---
+- PG
+- ''1''
+'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 18.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:45:17 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:45:21 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('---
+- G
+- ''1''
+','---
+- PG
+- ''1''
+'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:46:20 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:46:32 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('---
+- PG-13
+- ''1''
+','---
+- PG
+- ''1''
+'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:47:19 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 20.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:47:53 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:47:55 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:48:13 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 13.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:48:18 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:52:03 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 18.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:52:10 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:52:18 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:52:22 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:53:36 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (1.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 26.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:53:46 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN (NULL))[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:56:03 -0500
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/controllers/movies_controller.rb:63: syntax error, unexpected end-of-input, expecting end):
+  app/controllers/movies_controller.rb:63: syntax error, unexpected end-of-input, expecting end
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.1ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:56:19 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 12:56:28 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('R','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 12:56:35 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 12:56:36 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 12:56:37 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:56:41 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 12:59:48 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:09 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:10 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:11 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:11 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:00:12 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:00:13 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:00:14 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:15 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:15 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:18 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:19 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:20 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:00:44 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:00:48 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:00:50 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:00:53 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:08:58 -0500
+
+SyntaxError (/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/controllers/movies_controller.rb:8: syntax error, unexpected ':', expecting then or ';' or '\n'
+...rams[:sort] || params[:rating]:
+...                              ^
+/Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/controllers/movies_controller.rb:68: syntax error, unexpected end, expecting end-of-input
+  end
+  ^~~):
+  app/controllers/movies_controller.rb:8: syntax error, unexpected ':', expecting then or ';' or '\n'
+  app/controllers/movies_controller.rb:68: syntax error, unexpected end, expecting end-of-input
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.3ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:09:05 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    24:     </tr>
+    25:   </thead>
+    26:   <tbody>
+    27:     <% @movies.each do |movie| %>
+    28:       <tr>
+    29:         <td>
+    30:           <%= movie.title %>
+  app/views/movies/index.html.erb:27:in `_app_views_movies_index_html_erb___4017469375994505708_70091493582780'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (20.2ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:09:48 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 14.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:09:50 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:09:51 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:09:52 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:09:53 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:09:54 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))
+  Rendered movies/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:09:54 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))
+  Rendered movies/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:09:55 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:09:57 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:10:18 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.6ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 25.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:10:20 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY title
+  Rendered movies/index.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:10:21 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY release_date
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:10:23 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY title
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:10:35 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY release_date
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:10:36 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY title
+  Rendered movies/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:15:57 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 20.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:15:59 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (1.0ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (1.8ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (NULL, NULL)
+Completed 404 Not Found in 31ms (ActiveRecord: 2.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Movies with 'id': (all, {:order=>"title", :conditions=>["rating IN (?)", ["G", "R", "PG-13", "PG"]]}) (found 0 results, but was looking for 2)):
+  app/controllers/movies_controller.rb:15:in `index'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.1ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:16:47 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:16:50 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+DEPRECATION WARNING: Passing a nested array to Active Record finder methods is deprecated and will be removed. Flatten your array before using it for 'IN' conditions. (called from index at /Users/dushyant.bgs/Desktop/Development/Github/hw-rails-intro/app/controllers/movies_controller.rb:15)
+  [1m[35mMovie Load (0.6ms)[0m  SELECT  "movies".* FROM "movies" WHERE "id"."order" = 'title' AND "id"."conditions" IN ('rating IN (?)', 'G', 'R', 'PG-13', 'PG') LIMIT 1
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.1ms)
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: id.order: SELECT  "movies".* FROM "movies" WHERE "id"."order" = 'title' AND "id"."conditions" IN ('rating IN (?)', 'G', 'R', 'PG-13', 'PG') LIMIT 1):
+  app/controllers/movies_controller.rb:15:in `index'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (23.1ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:18:15 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 19ms (Views: 13.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:18:17 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (NULL, NULL)
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Movies with 'id': (all, {:order=>"release_date", :where=>["rating IN (?)", ["G", "R", "PG-13", "PG"]]}) (found 0 results, but was looking for 2)):
+  app/controllers/movies_controller.rb:16:in `index'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.1ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (11.8ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (21.8ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:19:17 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:19:19 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (1.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" IN (NULL, NULL)
+Completed 404 Not Found in 4ms (ActiveRecord: 1.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Movies with 'id': (all, {:order=>"title"}) (found 0 results, but was looking for 2)):
+  app/controllers/movies_controller.rb:16:in `index'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.5ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:20:53 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 13.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:20:55 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies"."rating" FROM "movies"[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms)
+
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  app/controllers/movies_controller.rb:16:in `index'
+
+
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.2ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/dushyant.bgs/.rvm/gems/ruby-2.6.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (20.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:22:04 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 13.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:22:06 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:22:07 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:22:08 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:22:09 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:26:49 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 17.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:26:51 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:26:52 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:26:57 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:27:08 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:27:12 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:27:49 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:27:53 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:28:50 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 19.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:28:54 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:31:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 208ms (Views: 200.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:31:17 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:32:08 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 37.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:32:12 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:32:25 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:32:27 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:32:28 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:32:49 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.4ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 20.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:32:55 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for ::1 at 2021-09-26 13:33:07 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BR%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:33:17 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('R'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:33:19 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:33:21 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.7ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:33:27 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:34:12 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 27.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BR%5D=1&ratings%5BPG-13%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:34:14 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "R"=>"1", "PG-13"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:34:33 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&commit=Refresh" for ::1 at 2021-09-26 13:34:43 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:34:53 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:35:07 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:35:30 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:37:08 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 26.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/movies?sort=title" for ::1 at 2021-09-26 13:37:12 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"title"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY title[0m
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?sort=release_date" for ::1 at 2021-09-26 13:37:22 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"sort"=>"release_date"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','R','PG-13','PG'))  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BG%5D=1&ratings%5BPG%5D=1&commit=Refresh" for ::1 at 2021-09-26 13:37:30 -0500
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"G"=>"1", "PG"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE (rating IN ('G','PG'))[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2021-09-26 13:37:41 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.4ms)
