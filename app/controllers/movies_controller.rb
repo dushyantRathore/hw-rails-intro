@@ -1,13 +1,18 @@
 class MoviesController < ApplicationController
 
+    def index
+      # Apply the sort according to the parameter
+      @movies = Movie.all.order(params[:sort])
+      
+      # Update the sorting-on-column check
+      @sorting_on_column = params[:sort]
+      
+    end  
+  
     def show
       id = params[:id] # retrieve movie ID from URI route
       @movie = Movie.find(id) # look up movie by unique ID
       # will render app/views/movies/show.<extension> by default
-    end
-  
-    def index
-      @movies = Movie.all
     end
   
     def new
