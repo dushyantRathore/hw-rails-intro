@@ -2,39 +2,56 @@ class MoviesController < ApplicationController
 
     def index
 
+      puts "\n----------------------------------------"
+      
       # Get all the movie ratings (unique)
       @all_ratings = Movie.select(:rating).map(&:rating).uniq
-
-      if params[:sort] || params[:ratings] # Check if defined
-        
-        puts "\n---------- Inside check for sorting/ratings ----------"
-
-        puts "\n---------- Selected Sorting ----------"
-        puts params[:sort]
-
-        # Update the sorting-on-column check
-        @sorting_on_column = params[:sort]
-
-        # Extract the parameters for ratings
-        @ratings = params[:ratings]
-        puts "\n---------- Ratings Parameters Provided ----------"
-        puts @ratings
-
-        # Check if ratings are defined and handle accordingly
-        @ratings ||= @all_ratings
-        puts "\n---------- Modified Ratings ----------" 
-        puts @ratings
-
-        # Reference the responses going to the view
-        @ratings = @ratings.keys if @ratings.respond_to?(:keys) 
-        puts "\n---------- Final Ratings for reference ----------"
-        puts @ratings
-
-        @movies = Movie.where("rating IN (?)", @ratings).order(params[:sort])
+      puts "\nUnique Ratings fetched from the DB : #{@all_ratings}"
       
-      else
-        @movies = Movie.all 
+      # Get the initial session variables
+      puts "\nInitial value of :sort in session : #{session[:sort]}"
+      puts "\nInitial value of :ratings in session : #{session[:ratings]}"
+
+      # Update the session variables if params are supplied
+      if params[:sort]
+        session[:sort] = params[:sort]
       end
+      
+      if params[:ratings]
+        session[:ratings] = params[:ratings]
+      end
+
+      puts "\nUpdated value of :sort in session : #{session[:sort]}"
+      puts "\nUpdated value of :ratings in session : #{session[:ratings]}"
+      
+      # Update the sorting-on-column check
+      @sorting_on_column = session[:sort]
+      
+      # Check if ratings are defined and handle accordingly
+      session[:ratings] ||= @all_ratings
+      puts "\nUpdated value of :ratings in session : #{session[:ratings]}" 
+      
+      # Reference the responses going to the view
+      @ratings = session[:ratings]
+      
+      # Extract the keys from the updated ratings
+      @ratings = @ratings.keys if @ratings.respond_to?(:keys) 
+      puts "\nFinal value of ratings for reference : #{@ratings}"
+
+      if session[:sort] != params[:sort] || session[:ratings] != params[:ratings] # Not containing the right parameters
+        puts "\nInside redirect method"
+        puts "\nValue of :sort in params : #{params[:sort]}"
+        puts "\nValue of :sort in session : #{session[:sort]}"
+        puts "\nvalue of :ratings in params : #{params[:ratings]}"
+        puts "\nvalue of :ratings in session : #{session[:ratings]}"
+        # Store the additional flash before the redirect
+        flash.keep
+        redirect_to movies_path(sort: session[:sort], ratings: session[:ratings])
+      end
+
+      @movies = Movie.where("rating IN (?)", @ratings).order(session[:sort])
+
+      puts "\n----------------------------------------"
 
     end  
   
