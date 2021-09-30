@@ -1,2 +1,2 @@
 https://github.com/dushyantRathore/hw-rails-intro
-http://enigmatic-hamlet-46596.herokuapp.com/movies
+http://enigmatic-hamlet-46596.herokuapp.com
